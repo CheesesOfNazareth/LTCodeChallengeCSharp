@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{74417EAA-5CFA-4D66-BF51-449690E618AC}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>ChallengeAccepted.CLI</RootNamespace>
-    <AssemblyName>ChallengeAccepted.CLI</AssemblyName>
+    <ProjectGuid>{C9CFB0DB-22C3-4CFF-96E5-3BFC3B02C0C2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChallengeAccepted.Shared</RootNamespace>
+    <AssemblyName>ChallengeAccepted.Shared</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <TargetFrameworkProfile />
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -33,9 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CommandAndConquer.CLI, Version=2.5.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\WMZ.CommandAndConquer.CLI.2.5.2\lib\net45\CommandAndConquer.CLI.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,23 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\PhotoController.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Models\Photo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ChallengeAccepted.BLL\ChallengeAccepted.BLL.csproj">
-      <Project>{f9782c12-fda8-4d92-bd94-720a555bc825}</Project>
-      <Name>ChallengeAccepted.BLL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ChallengeAccepted.Shared\ChallengeAccepted.Shared.csproj">
-      <Project>{c9cfb0db-22c3-4cff-96e5-3bfc3b02c0c2}</Project>
-      <Name>ChallengeAccepted.Shared</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
