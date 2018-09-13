@@ -35,6 +35,7 @@ namespace ChallengeAccepted.Tests.CLI.Controllers
         public void InformationSentToBLL()
         {
             var album = 1;
+            _service.Setup(s => s.GetPhotos(album)).Returns(new List<Photo>());
             _controller.GetPhotosByAlbum(album);
             _service.Verify(s => s.GetPhotos(album), Times.Once);
         }
